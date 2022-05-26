@@ -12,6 +12,13 @@ const reducer = (state = initialState, action) => {
             
         }
 
+        case 'remove' : {
+            return state.filter((item) => item !== action.payload)
+            
+        }
+
+
+
         default:
             return state
     }
@@ -19,4 +26,5 @@ const reducer = (state = initialState, action) => {
 
 const add = reducer(initialState, {type: 'add', payload: 4})
 
-console.log(add)
+
+console.log(remove)
